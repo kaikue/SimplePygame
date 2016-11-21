@@ -11,15 +11,16 @@ import pygame
 from pygame.locals import DOUBLEBUF
 import sys
 
-#Global constants- screen size
+#Global constants
+#Screen size
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
-
+#FPS
 FRAMES_PER_SEC = 60
-
+#Player dimensions
 PLAYER_WIDTH = 40
 PLAYER_HEIGHT = 60
-
+#Player movement speed
 SPEED = 5
 
 #Colors
@@ -72,12 +73,12 @@ def update():
         sys.exit(0)
     
     #If the user has pressed an arrow key, move the player
-    #X movement
+    #Horizontal movement
     if pressed[pygame.K_LEFT]:
         player_pos[0] -= SPEED
     if pressed[pygame.K_RIGHT]:
         player_pos[0] += SPEED
-    #Y movement
+    #Vertical movement
     if pressed[pygame.K_UP]:
         player_pos[1] -= SPEED
     if pressed[pygame.K_DOWN]:
